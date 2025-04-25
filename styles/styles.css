@@ -1,0 +1,139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0e1a2b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #162336;
+    color: white;
+}
+
+.hero button {
+    background-color: #30bfce;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9f1f7;
+    padding: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+}
+
+.about img {
+    width: 300px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.tables {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table, th, td {
+    border: none;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.contact {
+    background-color: white;
+    padding-block: 10px;
+    padding-inline: 500px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btnSend {
+    width: 200px;
+}
+
+.iframe {
+    background-color: #162336;
+    padding: 20px;
+    text-align: center;
+    border: none;
+}
+
+footer {
+    background-color: #0e1a2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

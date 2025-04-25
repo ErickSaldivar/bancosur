@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco del Sur</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO CON MENÚ -->
+    <header>
+        <div class="logo">Banco del Sur</div>
+        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section class="hero">
+            <div class="text">
+                <h1>MEJORAMOS TU EXPERIENCIA DE USUARIO</h1>
+                <p>150+ Clientes | 425+ Proyectos | 12+ Ciudades</p>
+                <a href="#contact"><button>Contactanos</button></a>
+            </div>            
+        </section>
+
+        <section class="cards" id="#servicios">
+            <div class="card">
+                <a href="bank_consulting.html"><img src="images/consultoria-bancaria.avif" alt="Consultoria Bancaria" height="400" width="100"></a> 
+                <h3>Consultoria Bancaria</h3>
+                <p>Trabajamos con la Bolsa de Valores de Lima<br>Principal Plataforma Bancaria del Sur</p>
+                <p>Consultoria de inversiones y acciones potenciado por IA.</p>
+            </div>
+            <div class="card">
+                <a href="cambio_divisas.html"><img src="images/cambio_divisa.jpg" alt="Cambio de Divisa" height="400" width="100"></a> 
+                <h3>Cambio de divisa</h3>
+                <p>Obten Dolares<br>Obten Euros</p>
+                <p>Y otras divisas más al mejor precio del mercado.</p>
+            </div>
+            <div class="card">
+                <a href="prestamos.html"><img src="images/prestamo.jpg" alt="Prestamos" height="400" width="50"></a>
+                <h3>Prestamos Rápidos</h3>
+                <p>A sola firma<br>Menor interés</p>
+                <p>Necesitas empeñar algo para obtener dinero rápido? Obten tu prestamo con los mejores beneficios.</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <img src="images/equipo.avif" alt="Equipo">
+            <div class="info">
+                <h2>Nuestra Visión y Metas</h2>
+                <p>Ser líderes globales en soluciones tecnológicas innovadoras que mejoren la experiencia del usuario y optimicen el rendimiento digital de empresas en todo el mundo.</p>
+                <p><strong>Andrehe Apaza</strong><br>Fundador & CEO</p>
+            </div>
+        </section>
+
+        <section class="tables">
+            <h2 style="padding-left: 25%;">Nuestros Clientes</h2>
+            <div style="display: flex; justify-content: center;">
+                <table>                    
+                    <tbody>
+                        <tr><td>Gerson Lich</td><td>Banco del Futuro</td><td>Lima</td></tr>
+                        <tr><td>John McCurtnik</td><td>Casa de Cambio Sol y Luna</td><td>Arequipa</td></tr>
+                        <tr><td>Ana Rodriguez</td><td>Prestamos Agiles S.A.</td><td>Cuzco</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contactanos</h2>
+            <form>
+                <label>Nombre:</label><input type="text" name="nombre"><br>
+                <label>Email:</label><input type="email" name="email"><br>
+                <label>Mensaje:</label><textarea name="mensaje"></textarea><br>
+                <input type="submit" value="Enviar" class="btnSend">
+            </form>
+        </section>
+
+        <section class="iframe">
+            <iframe src="frames/iframe1.html" width="30%"></iframe>
+            <iframe src="frames/iframe2.html" width="30%"></iframe>
+            <iframe src="frames/iframe3.html" width="30%"></iframe>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Banco del Sur S.A.C. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
