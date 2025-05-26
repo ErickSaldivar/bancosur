@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias Financieras</title>
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+    <meta name="description" content="Banco del Sur - Mejora tu experiencia financiera con nuestros servicios innovadores.">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
         .news {            
@@ -15,39 +17,71 @@
 </head>
 <body>
     <header>
-      <div class="logo">Banco del Sur</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="#">Noticias</a></li>
-          <li><a href="index.html#contact">Contacto</a></li>
-        </ul>
-      </nav>
+        <div class="header-top">
+            <div class="logo fade-down">
+            <img src="images/logo.png" alt="Banco del Sur Logo">
+        </div>        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        
     </header>
   
     <main>
       <section class="hero">
-        <h1>Noticias Financieras</h1>
-        <p>Mantente al día con las últimas novedades del mundo financiero.</p>
+        <div class="text">
+          <h1>Noticias Financieras</h1>
+          <p>Mantente al día con las últimas novedades del mundo financiero.</p>
+        </div>
       </section>
-  
-      <section class="news">
-        <article>
-          <h2>La inflación alcanza su punto más bajo del año</h2>
-          <p>Según datos del banco central, la inflación anual se ha reducido un 2.3% durante el último trimestre...</p>
-        </article>  
-  
-        <article>
-          <h2>El dólar se estabiliza frente a monedas latinoamericanas</h2>
-          <p>Analistas señalan que el tipo de cambio se mantendrá estable durante el segundo semestre de 2025...</p>
-        </article>
-  
-        <article>
-          <h2>Nuevas regulaciones para préstamos rápidos</h2>
-          <p>El gobierno implementa medidas para proteger a los consumidores en operaciones de crédito a corto plazo...</p>
-        </article>
+
+      <section class="features">
+
+        <!-- Noticia 1 -->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/baja_inflacion.jpg" alt="Inflación baja">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>La inflación alcanza su punto más bajo del año</h2>
+            <p>Según datos del banco central, la inflación anual se ha reducido un 2.3% durante el último trimestre, marcando un alivio en los precios del consumo básico.</p>
+          </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="feature-card reverse">
+          <div class="feature-image fade-down">
+            <img src="images/dolar.webp" alt="Dólar estable">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>El dólar se estabiliza frente a monedas latinoamericanas</h2>
+            <p>Analistas proyectan que el tipo de cambio se mantendrá estable durante el segundo semestre de 2025, favoreciendo el comercio exterior.</p>
+          </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/regulacion.webp" alt="Regulaciones préstamos">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Nuevas regulaciones para préstamos rápidos</h2>
+            <p>El gobierno implementa nuevas medidas para proteger a los consumidores y evitar prácticas abusivas en créditos de corto plazo.</p>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          <a href="index.html#contact"><button>Contáctanos</button></a>
+        </div>
+
       </section>
     </main>
   

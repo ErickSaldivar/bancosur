@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambio de Divisas</title>
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+    <meta name="description" content="Banco del Sur - Mejora tu experiencia financiera con nuestros servicios innovadores.">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
         .hero {
@@ -22,20 +24,36 @@
       .hero .media {
         display: none;
       }
+      @media (max-width: 600px) {
+        .hero {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .hero .text {
+          max-width: 100%;
+        }      
+      }
       </style>
 </head>
 <body>
     <header>
-      <div class="logo">Banco del Sur</div>
-      <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="index.html#contact">Contacto</a></li>
-        </ul>
-      </nav>
+        <div class="header-top">
+            <div class="logo fade-down">
+            <img src="images/logo.png" alt="Banco del Sur Logo">
+        </div>        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        
     </header>
     <main>
       <section class="hero">
@@ -43,18 +61,43 @@
           <h1>Cambio de Divisas</h1>
           <p>Ofrecemos compra y venta de moneda extranjera a tasas competitivas.</p>
         </div>
-        <div class="media">
-          <img src="images/divisas.jpg" alt="Cambio de divisas">
-        </div>
       </section>
-      <section class="about">
-        <div class="info">
-          <h2>¿Qué ofrecemos?</h2>
-          <ul>
-            <li>Conversión de múltiples monedas.</li>
-            <li>Transacciones seguras y rápidas.</li>
-            <li>Atención personalizada en sucursal.</li>
-          </ul>
+
+      <section class="features">
+        <!-- Bloque 1: Imagen + Texto -->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/cambio_divisas.jpg" alt="Cambio de divisas">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Conversión de Múltiples Monedas</h2>
+            <p>Ofrecemos servicios de cambio entre dólares, euros, yenes y más.</p>
+          </div>
+        </div>
+
+        <!-- Bloque 2: Texto + Imagen -->
+        <div class="feature-card reverse">
+          <div class="feature-image fade-down">
+            <img src="images/transaccion_segura.avif" alt="Seguridad en transacciones">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Transacciones Seguras</h2>
+            <p>Con garantía en sucursal o en línea, siempre protegemos tu dinero.</p>
+          </div>
+        </div>
+
+        <!-- Bloque 3: Imagen + Texto -->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/atencion_personalizada.webp" alt="Atención personalizada">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Atención Personalizada</h2>
+            <p>Nuestro personal está preparado para darte el mejor servicio.</p>
+          </div>
+        </div>
+
+        <div class="cta-button">
           <a href="index.html#contact"><button>Contáctanos</button></a>
         </div>
       </section>

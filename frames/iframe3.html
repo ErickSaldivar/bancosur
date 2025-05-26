@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Promociones</title>
-        <style>
-            body {
-                font-family: sans-serif;
-                font-size: 14px;
-                background-color: #162336;
-                margin: 0;
-                padding: 10px;
-                color: whitesmoke;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
-        🎁 Promoción: Obten asesoria en tu primera inversion gratis!
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Promociones - Banco del Sur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0e1a2b;
+      --accent: #1f3c5a;
+      --text: #f5f5f5;
+      --highlight: #00bcd4;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .promo-card {
+      background-color: var(--accent);
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      max-width: 500px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .promo-card .tag {
+      background-color: var(--highlight);
+      color: white;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .promo-card h2 {
+      font-size: 1.3rem;
+      color: var(--highlight);
+      margin-bottom: 10px;
+    }
+
+    .promo-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="promo-card">
+    <div class="tag">🎁 Promoción Exclusiva</div>
+    <h2>¡Tu primera inversión con asesoría gratuita!</h2>
+    <p>Banco del Sur te acompaña en tu camino financiero. Comienza con seguridad: recibe asesoría experta sin costo en tu primer plan de inversión.</p>
+  </div>
+</body>
 </html>

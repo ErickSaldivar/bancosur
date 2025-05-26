@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Noticias</title>
-        <style>
-            body {
-                font-family: sans-serif;
-                font-size: 14px;
-                background-color: #162336;
-                margin: 0;
-                padding: 10px;
-                color: whitesmoke;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
-        📰 Últimas noticias: Lanzamos una nueva herramienta de análisis de la Bolsa de Valores en tiempo real.
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Noticias - Banco del Sur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0e1a2b;
+      --accent: #1f3c5a;
+      --text: #f5f5f5;
+      --highlight: #1da1f2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: var(--accent);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--highlight);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .card .tag {
+      font-size: 0.8rem;
+      background-color: var(--highlight);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">📰 Última Hora</div>
+    <h2>Nueva herramienta de análisis bursátil</h2>
+    <p>Banco del Sur lanza una poderosa plataforma de análisis en tiempo real para inversores, con tecnología basada en inteligencia artificial y acceso directo a la Bolsa de Valores de Lima.</p>
+  </div>
+</body>
 </html>

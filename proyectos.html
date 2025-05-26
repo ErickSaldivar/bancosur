@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+    <meta name="description" content="Banco del Sur - Mejora tu experiencia financiera con nuestros servicios innovadores.">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
         .clients {
@@ -15,40 +17,69 @@
 </head>
 <body>
     <header>
-      <div class="logo">Banco del Sur</div>
-      <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="index.html#contact">Contacto</a></li>
-        </ul>
-      </nav>
+        <div class="header-top">
+            <div class="logo fade-down">
+            <img src="images/logo.png" alt="Banco del Sur Logo">
+        </div>        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        
     </header>
   
-    <main>
+    <main>      
       <section class="hero">
         <h1>Proyectos con Clientes</h1>
         <p>Conoce algunas de nuestras colaboraciones más destacadas en el sector financiero.</p>
       </section>
-  
-      <section class="clients">
-        <div class="client">
-          <h2>Banco del Futuro</h2>
-          <p>Implementamos un sistema de asesoría personalizada para inversiones digitales.</p>
+
+      <section class="features">
+        <!--Bloque 1 Imagen texto -->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/banco_futuro.jpg" alt="Banco del Futuro">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Banco del Futuro</h2>
+            <p>Implementamos un sistema de asesoría personalizada para inversiones digitales.</p>
+          </div>
         </div>
-  
-        <div class="client">
-          <h2>Casa de Cambio Sol y Luna</h2>
-          <p>Automatizamos procesos de cambio de divisas con reportes inteligentes y en tiempo real.</p>
+
+        <!-- Bloque 2 Texto Imagen -->
+        <div class="feature-card reverse">
+          <div class="feature-image  fade-down">
+            <img src="images/cambio_sol_luna.png" alt="Casa de Cambio Sol y Luna">
+          </div>
+          <div class="feature-text  fade-down">
+            <h2>Casa de Cambio Sol y Luna</h2>
+            <p>Automatizamos procesos de cambio de divisas con reportes inteligentes y en tiempo real.</p>
+          </div>
         </div>
-  
-        <div class="client">
-          <h2>Préstamos Ágiles S.A.</h2>
-          <p>Desarrollamos una plataforma web para gestionar microcréditos con atención al cliente integrada.</p>
+
+        <!-- Bloque 3 Imagen texto-->
+        <div class="feature-card">
+          <div class="feature-image fade-down">
+            <img src="images/prestamo_agil.jpg" alt="Préstamos Ágiles S.A.">
+          </div>
+          <div class="feature-text fade-down">
+            <h2>Préstamos Ágiles S.A.</h2>
+            <p>Desarrollamos una plataforma web para gestionar microcréditos con atención al cliente integrada.</p>
+          </div>
+        </div>
+
+        <div class="cta-button">
+          <a href="index.html#contact"><button>Contáctanos</button></a>
         </div>
       </section>
+  
     </main>
   
     <footer>

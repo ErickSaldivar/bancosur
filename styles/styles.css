@@ -12,25 +12,75 @@ header {
     background-color: #0e1a2b;
     color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.header-top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo img{
+    height: 80px;
+    width: auto;
+    object-fit: contain;    
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-right: 80px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.marquee-container {
+    background-color: #132642;
+    width: 100%;
+    padding: 8px 0;
+}
+
+marquee {
+    color: white;
+    font-size: 14px;
 }
 
 .hero {
@@ -42,6 +92,15 @@ nav a {
 }
 
 .hero button {
+    background-color: #162336;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.hero button:hover {
     background-color: #30bfce;
     color: black;
     padding: 10px 20px;
@@ -64,6 +123,12 @@ nav a {
     width: 30%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -97,6 +162,7 @@ table {
 
 table, th, td {
     border: none;
+    border-radius: 10px;
 }
 
 th, td {
@@ -108,8 +174,10 @@ th, td {
 
 .contact {
     background-color: white;
-    padding-block: 10px;
-    padding-inline: 500px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 15px auto;
+    box-sizing: border-box;
 }
 
 form input, form textarea {
@@ -118,18 +186,95 @@ form input, form textarea {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .btnSend {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .iframe {
     background-color: #162336;
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
+    height: 200px;
     border: none;
 }
+
+.iframe-item{
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card.reverse {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.feature-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #003366;
+  align-self: start;
+}
+
+.feature-text p {
+  font-size: 16px;
+  color: #444;
+}
+
+.cta-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-button button {
+  background-color: #003366;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta-button button:hover {
+  background-color: #00509e;
+}
+
+
 
 footer {
     background-color: #0e1a2b;
@@ -137,3 +282,150 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* Clases para animación */
+
+.fade-down {
+  animation: fadeDown 1s ease-out both;
+}
+
+.fade-down.show {
+  animation: fadeDown 1s ease-out forwards;
+}
+
+/* Estilos Responsivos */
+
+@media (max-width: 600px) {
+
+    .header-top {
+        grid-template-columns: 2fr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    marquee {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tables {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .contact {
+        margin: 10px;
+    }
+
+    .feature-card {
+        position: relative;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        overflow: hidden;
+        min-height: 250px;
+        border-radius: 12px;
+        color: white;
+        padding-right: 50px;
+    }
+
+    .feature-card.reverse {
+        flex-direction: column;
+        align-items: center;
+        align-self: start;
+        padding-right: 50px;
+    }
+
+    .feature-image {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .feature-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.5);
+    }
+
+    .feature-text {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        color: white;
+    }
+
+    .feature-text h2 {
+        color: white;
+        align-self: auto;
+    }
+
+    .feature-text p {
+        font-size: 16px;
+        color: #ddd;
+        align-self: auto;
+    }
+
+    .iframe-item{
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+}
+
+/* Animation Keyframes */
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

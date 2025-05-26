@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco del Sur</title>
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+    <meta name="description" content="Banco del Sur - Mejora tu experiencia financiera con nuestros servicios innovadores.">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- ENCABEZADO CON MENÚ -->
     <header>
-        <div class="logo">Banco del Sur</div>
-        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        <div class="header-top">
+            <div class="logo fade-down">
+            <img src="images/logo.png" alt="Banco del Sur Logo">
+        </div>        
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -20,32 +24,35 @@
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
+        </div>
+        <marquee>Bienvenido a nuestra web. ¡Contáctanos para más información!</marquee>
+        
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <section class="hero">
-            <div class="text">
+        <section class="hero" style="background: linear-gradient(to right, #0056b3 30%, rgba(0,0,0,0)), url('images/rentable.jpg'); background-position: right; background-repeat: no-repeat; background-size: auto;">
+            <div class="text fade-down">
                 <h1>MEJORAMOS TU EXPERIENCIA DE USUARIO</h1>
                 <p>150+ Clientes | 425+ Proyectos | 12+ Ciudades</p>
-                <a href="#contact"><button>Contactanos</button></a>
-            </div>            
+                <a href="#contact"><button>Contáctanos</button></a>
+            </div>
         </section>
 
         <section class="cards" id="#servicios">
-            <div class="card">
+            <div class="card fade-down">
                 <a href="bank_consulting.html"><img src="images/consultoria-bancaria.avif" alt="Consultoria Bancaria" height="400" width="100"></a> 
                 <h3>Consultoria Bancaria</h3>
                 <p>Trabajamos con la Bolsa de Valores de Lima<br>Principal Plataforma Bancaria del Sur</p>
                 <p>Consultoria de inversiones y acciones potenciado por IA.</p>
             </div>
-            <div class="card">
+            <div class="card fade-down">
                 <a href="cambio_divisas.html"><img src="images/cambio_divisa.jpg" alt="Cambio de Divisa" height="400" width="100"></a> 
                 <h3>Cambio de divisa</h3>
                 <p>Obten Dolares<br>Obten Euros</p>
                 <p>Y otras divisas más al mejor precio del mercado.</p>
             </div>
-            <div class="card">
+            <div class="card fade-down">
                 <a href="prestamos.html"><img src="images/prestamo.jpg" alt="Prestamos" height="400" width="50"></a>
                 <h3>Prestamos Rápidos</h3>
                 <p>A sola firma<br>Menor interés</p>
@@ -53,7 +60,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about fade-down">
             <img src="images/equipo.avif" alt="Equipo">
             <div class="info">
                 <h2>Nuestra Visión y Metas</h2>
@@ -62,7 +69,7 @@
             </div>
         </section>
 
-        <section class="tables">
+        <section class="tables fade-down">
             <h2 style="padding-left: 25%;">Nuestros Clientes</h2>
             <div style="display: flex; justify-content: center;">
                 <table>                    
@@ -76,8 +83,8 @@
             
         </section>
 
-        <section class="contact" id="contact">
-            <h2>Contactanos</h2>
+        <section class="contact fade-down" id="contact">
+            <h2>Contáctanos</h2>
             <form>
                 <label>Nombre:</label><input type="text" name="nombre"><br>
                 <label>Email:</label><input type="email" name="email"><br>
@@ -86,10 +93,10 @@
             </form>
         </section>
 
-        <section class="iframe">
-            <iframe src="frames/iframe1.html" width="30%"></iframe>
-            <iframe src="frames/iframe2.html" width="30%"></iframe>
-            <iframe src="frames/iframe3.html" width="30%"></iframe>
+        <section class="iframe fade-down">
+            <iframe class="iframe-item" src="frames/iframe1.html" width="30%"></iframe>
+            <iframe class="iframe-item" src="https://www.youtube.com/embed/0lMDd6iX85c?list=PLabB0iEnTHCARV9-O2OzkFlsSli_5NsKn" title="Introducción para Principiantes - Curso Educación Financiera - Capítulo 1 -TradingForex TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="iframe-item" src="frames/iframe3.html" width="30%"></iframe>
         </section>
     </main>
 
