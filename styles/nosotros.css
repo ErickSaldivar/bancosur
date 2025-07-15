@@ -1,0 +1,159 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f4f4f4, #e9f1f7);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+    background-color: #0e1a2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo img{
+    height: 80px;
+    width: auto;
+    object-fit: contain;    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-right: 80px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+h1 {
+  color: #004d99;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.mision-vision div {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.mision-vision h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.equipo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.equipo h2 {
+  color: #004d99;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #0077cc;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #004d99;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer p {
+      color: white;
+}

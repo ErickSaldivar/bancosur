@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos</title>
+    <link rel="stylesheet" href="styles/style_sec.css">
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+    <h1>Evaluación de Préstamo Rápido</h1>
+    <label for="nombre">Nombre del Cliente:</label>
+    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+    <label for="monto">Monto solicitado (Soles):</label>
+    <input type="number" id="monto" placeholder="Ejemplo: 5000">
+
+    <button onclick="evaluarPrestamo()">Evaluar Préstamo</button>
+
+    <div class="output" id="resultado"></div>
+        <br></br>
+    <div><a href="prestamos.html"><button>Regresar</button></a></div>
+</body>
+<script src="scripts/prestamos.js"></script>
+</html>
