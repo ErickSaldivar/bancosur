@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos Registrados</title>
-    <link rel="stylesheet" href="styles/admin.css">
-    <link rel="icon" href="images/icon_logo.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contactos Registrados</title>
+<link rel="stylesheet" href="styles/admin.css">
+<link rel="icon" href="images/icon_logo.png" type="image/png">
 </head>
 <body>
-    <div class="container">
-    <h1>Panel de Contactos</h1>
-    <h2 id="bienvenida"></h2>
+<div class="container">
+  <h1>Panel de Contactos</h1>
+  <h2 id="bienvenida"></h2>
 
-    <div>
-        <input type="text" id="busquedaNombre" placeholder="Buscar por nombre">
-        <button onclick="buscarContactos()">🔍 Buscar</button>
-        <button onclick="cargarContactos()">🔄 Mostrar Todos</button>
-    </div>
+  <div>
+    <input type="text" id="busquedaNombre" placeholder="Buscar por nombre">
+    <button onclick="buscarContactos()">🔍 Buscar</button>
+    <button onclick="cargarContactos()">🔄 Mostrar Todos</button>
+  </div>
 
-    <button onclick="limpiarContactosSeleccionados()">🗑️ Limpiar Atendidos</button>
-    <div id="tabla"></div>
-    <br>
-    <a href="index.html"><button>Salir</button></a>
-    </div>
-</body>
+  <button onclick="guardarCambios()">💾 Guardar Cambios</button>
+  <button onclick="limpiarContactosSeleccionados()">🗑️ Limpiar Atendidos</button>
+
+  <div id="tabla"></div>
+  <br>
+  <a href="index.html"><button>Salir</button></a>
+</div>
+
 <script src="scripts/admin_contactos.js"></script>
+</body>
 </html>

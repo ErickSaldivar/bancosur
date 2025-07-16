@@ -8,17 +8,25 @@ function cargarContactos(filtrados = null) {
       return;
     }
 
-    let html = `<table><thead><tr><th>Atendido</th><th>Nombre</th><th>Email</th><th>Mensaje</th></tr></thead><tbody>`;
+    let html = `<table><thead><tr>
+      <th>Atendido</th>
+      <th>Importante</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Mensaje</th>
+    </tr></thead><tbody>`;
+
     contactos.forEach((c, index) => {
       html += `<tr>
         <td><input type="checkbox" class="check-contacto" data-index="${index}"></td>
+        <td><input type="checkbox" class="check-importante" data-index="${index}" ${c.importante ? 'checked' : ''}></td>
         <td>${c.nombre}</td>
         <td>${c.email}</td>
-        <td>${c.mensaje}</td>
+        <td><textarea class="mensaje-editable" data-index="${index}">${c.mensaje}</textarea></td>
       </tr>`;
     });
-    html += '</tbody></table>';
 
+    html += '</tbody></table>';
     tablaDiv.innerHTML = html;
 }
 
@@ -57,6 +65,28 @@ function buscarContactos() {
     }
 
     cargarContactos(filtrados);
+}
+
+function guardarCambios() {
+    const datos = localStorage.getItem('contactos');
+    let contactos = datos ? JSON.parse(datos) : [];
+
+    const mensajesEditables = document.querySelectorAll('.mensaje-editable');
+    const importantes = document.querySelectorAll('.check-importante');
+
+    mensajesEditables.forEach(textarea => {
+      const index = parseInt(textarea.getAttribute('data-index'));
+      contactos[index].mensaje = textarea.value.trim();
+    });
+
+    importantes.forEach(checkbox => {
+      const index = parseInt(checkbox.getAttribute('data-index'));
+      contactos[index].importante = checkbox.checked;
+    });
+
+    localStorage.setItem('contactos', JSON.stringify(contactos));
+    alert('✅ Cambios guardados.');
+    cargarContactos();
 }
 
 function cargarBienvenida() {
