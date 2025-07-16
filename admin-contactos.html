@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,16 @@
     <div class="container">
     <h1>Panel de Contactos</h1>
     <h2 id="bienvenida"></h2>
+
+    <div>
+        <input type="text" id="busquedaNombre" placeholder="Buscar por nombre">
+        <button onclick="buscarContactos()">🔍 Buscar</button>
+        <button onclick="cargarContactos()">🔄 Mostrar Todos</button>
+    </div>
+
     <button onclick="limpiarContactosSeleccionados()">🗑️ Limpiar Atendidos</button>
     <div id="tabla"></div>
-    <br></br>
+    <br>
     <a href="index.html"><button>Salir</button></a>
     </div>
 </body>

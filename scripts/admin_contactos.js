@@ -1,8 +1,6 @@
-//carga contactos de LocalStorage
-
-function cargarContactos() {
+function cargarContactos(filtrados = null) {
     const datos = localStorage.getItem('contactos');
-    const contactos = datos ? JSON.parse(datos) : [];
+    const contactos = filtrados ?? (datos ? JSON.parse(datos) : []);
     const tablaDiv = document.getElementById('tabla');
 
     if (contactos.length === 0) {
@@ -22,9 +20,9 @@ function cargarContactos() {
     html += '</tbody></table>';
 
     tablaDiv.innerHTML = html;
-  }
+}
 
-  function limpiarContactosSeleccionados() {
+function limpiarContactosSeleccionados() {
     const datos = localStorage.getItem('contactos');
     let contactos = datos ? JSON.parse(datos) : [];
 
@@ -45,13 +43,27 @@ function cargarContactos() {
     contactos = contactos.filter((_, index) => !indicesAEliminar.includes(index));
     localStorage.setItem('contactos', JSON.stringify(contactos));
     cargarContactos();
-  }
+}
 
-  function cargarBienvenida() {
+function buscarContactos() {
+    const nombreBuscado = document.getElementById('busquedaNombre').value.trim().toLowerCase();
+    const datos = localStorage.getItem('contactos');
+    const contactos = datos ? JSON.parse(datos) : [];
+
+    const filtrados = contactos.filter(c => c.nombre.toLowerCase().includes(nombreBuscado));
+
+    if (filtrados.length === 0) {
+        alert('No se encontraron contactos con ese nombre.');
+    }
+
+    cargarContactos(filtrados);
+}
+
+function cargarBienvenida() {
     const admin = localStorage.getItem('adminUsuario') || 'Erick';
     document.getElementById('bienvenida').textContent = `Bienvenido ${admin}`;
-  }
+}
 
-  // Inicializar
-  cargarBienvenida();
-  cargarContactos();
+// Inicializar
+cargarBienvenida();
+cargarContactos();
